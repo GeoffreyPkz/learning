@@ -23,7 +23,7 @@ int main(int argc, char const *argv[])
 	int tmp = 0;
 	do{
 		printf("Donnez moi quelquechose...Un nombre évidemmment, c'est le jeu du plus ou moins\n");
-		scanf(%d,rep);
+		scanf("%d",rep);
 		if(rep > nombreMystere){
 			printf("C'est moins!\n");
 		}
