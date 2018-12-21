@@ -5,7 +5,7 @@
 
 //Déclaration des prototypes des fonctions
 int menu();
-int nombreMystere(int MAX);
+int nombreM(int MAX);
 //Initialisation des variables globales
 const int MIN = 1;
 int MAX = 0,continuerPartie = 1; 
@@ -41,7 +41,7 @@ int main(int argc, char const *argv[])
 		}		
 
 		//Génération du nombre mystère
-		nombreMystere = nombreMystere(MAX);
+		nombreMystere = nombreM(MAX);
 
 		int tmp = 0;
 		do{
@@ -102,7 +102,7 @@ int menu(){
 	return choix;
 }
 
-int nombreMystere(int MAX){
+int nombreM(int MAX){
 	printf("Laissez moi du temps pour choisir un nombre....\n");
 	srand(time(NULL));
 	nombreMystere = (rand() % (MAX - MIN + 1)) + MIN;
