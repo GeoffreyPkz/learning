@@ -5,6 +5,7 @@
 
 //Déclaration des prototypes des fonctions
 int menu();
+int rejouer();
 int nombreM(int MAX);
 //Initialisation des variables globales
 const int MIN = 1;
@@ -63,26 +64,7 @@ int main(int argc, char const *argv[])
 		//Message de victoire + score
 		printf("Bravo, c'est trouvé! En exactement %d coups\n",tmp);
 
-		printf("=======================================\n");
-		printf("Voulez-vous continuer de jouer? (1 = Oui / 0 = non) =\n");
-		printf("=======================================\n");
 		
-		//Boucle pour continuer ou non
-		do{
-			scanf("%d", &ch);
-			if((ch != 0) && (ch != 1)){
-				printf("J'ai besoin d'une réponse! Zéro ou Un! Comme ça -> 0 ou 1\n");
-			}
-		}while((ch != 0) || (ch != 1));
-
-		if(!ch){
-			continuerPartie = 0;
-			printf("Bye bye!\n");
-		}
-		if(ch){
-			continuerPartie = 1;
-			printf("Chouette! On continue!\n");
-		}
 	}while(!continuerPartie);
 	return 0;
 }
@@ -106,6 +88,30 @@ int menu(){
 				printf("J'ai besoin d'une réponse sous forme de nombre compris entre 1 et 3! C'est pas compliqué!\n");
 			}
 		}while(choix < 1 && choix > 3);
+	return choix;
+}
+
+int rejouer(){
+	printf("=======================================\n");
+	printf("Voulez-vous rejouer?===================\n");
+	printf("=======================================\n");
+	printf("1- Oui               ==================\n");
+	printf("0- Non               ==================\n");
+	printf("=======================================\n");
+	int choix = 0;
+		do{
+			printf("Choisissez votre réponse entre 0 et 1!\n");
+			scanf("%d",&choix);
+			if(choix == 1){
+				printf("On rejoue!\n");
+			}
+			else if(choix == 0){
+				printf("Ok! On s'est bien amusé, j'espère.\n");
+			}
+			else{
+				printf("Il faut me renseigner un chiffre entre 0 et 1\n");
+			}
+		}while(choix < 0 && choix > 1);
 	return choix;
 }
 
