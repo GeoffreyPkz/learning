@@ -91,7 +91,6 @@ int menu(){
 	printf("3- De 1 à 10000      ==================\n");
 	printf("=======================================\n");
 	printf("Avez-vous choisi?======\n");
-	int choix = 0;
 		do{
 			scanf("%d", &choix);
 			if(choix != 1 || choix != 2 || choix != 3){
