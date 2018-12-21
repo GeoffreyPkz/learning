@@ -65,7 +65,8 @@ int main(int argc, char const *argv[])
 		printf("Bravo, c'est trouvé! En exactement %d coups\n",tmp);
 
 		continuerPartie = rejouer();
-		
+		printf("vous avez tappé : %d\n",continuerPartie);
+
 	}while(!continuerPartie);
 	return 0;
 }
