@@ -9,7 +9,7 @@ int nombreM(int MAX);
 //Initialisation des variables globales
 const int MIN = 1;
 int MAX = 0,continuerPartie = 1; 
-int nombreMystere = 0, rep = 0, choix = 0, ch = 0;
+int nombreMystere = 0, rep = 0, ch = 0;
 
 
 
@@ -90,9 +90,10 @@ int menu(){
 	printf("2- De 1 à 1000       ==================\n");
 	printf("3- De 1 à 10000      ==================\n");
 	printf("=======================================\n");
-	printf("Avez-vous choisi?======\n");
+	int choix = 0;
 		do{
-			scanf("%d", &choix);
+			printf("Choisissez un chiffre entre 1 et 3!\n");
+			scanf("%d",&choix);
 			if(choix != 1 || choix != 2 || choix != 3){
 				printf("J'ai besoin d'une réponse sous forme de nombre compris entre 1 et 3! C'est pas compliqué!\n");
 			}
