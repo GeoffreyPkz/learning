@@ -94,7 +94,7 @@ int menu(){
 		do{
 			printf("Choisissez un chiffre entre 1 et 3!\n");
 			scanf("%d",&choix);
-			if(choix != 1 || choix != 2 || choix != 3){
+			if(choix < 1 || choix > 3){
 				printf("vous avez tappé %d\n",choix);
 				printf("J'ai besoin d'une réponse sous forme de nombre compris entre 1 et 3! C'est pas compliqué!\n");
 			}
