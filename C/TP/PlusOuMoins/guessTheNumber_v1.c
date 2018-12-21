@@ -78,6 +78,7 @@ int main(int argc, char const *argv[])
 				printf("Bye bye!\n");
 			}
 			if(ch){
+				continuerPartie = 1;
 				printf("Chouette! On continue!\n");
 			}
 		}while(ch != 0 || ch != 1);
