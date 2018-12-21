@@ -98,7 +98,7 @@ int menu(){
 				printf("vous avez tappé %d\n",choix);
 				printf("J'ai besoin d'une réponse sous forme de nombre compris entre 1 et 3! C'est pas compliqué!\n");
 			}
-		}while(choix != 1 || choix !=2 || choix != 3);
+		}while(choix < 1 && choix > 3);
 	return choix;
 }
 
