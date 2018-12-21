@@ -41,7 +41,7 @@ int main(int argc, char const *argv[])
 		}		
 
 		//Génération du nombre mystère
-		int nombreMystere = &nombreMystere(MAX);
+		nombreMystere = nombreMystere(MAX);
 
 		int tmp = 0;
 		do{
