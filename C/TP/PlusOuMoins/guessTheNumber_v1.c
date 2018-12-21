@@ -46,6 +46,7 @@ int main(int argc, char const *argv[])
 		int tmp = 0;
 		do{
 			printf("Donnez moi quelquechose...Un nombre évidemmment, c'est le jeu du plus ou moins\n");
+			tmp++;
 			scanf("%d", &rep);
 			if(rep > nombreMystere){
 				printf("C'est moins!\n");
@@ -63,19 +64,23 @@ int main(int argc, char const *argv[])
 		printf("Bravo, c'est trouvé! En exactement %d coups\n",tmp);
 
 		printf("=======================================\n");
-		printf("Voulez-vous continuer de jouer? (0/1) =\n");
+		printf("Voulez-vous continuer de jouer? (1 = Oui / 0 = non) =\n");
 		printf("=======================================\n");
+		
+		//Boucle pour continuer ou non
 		do{
 			scanf("%d", &ch);
-			if(ch != 0 || ch != 1){
+			if(ch != 0 && ch != 1){
 				printf("J'ai besoin d'une réponse! Zéro ou Un! Comme ça -> 0 ou 1\n");
 			}
 			if(!ch){
 				continuerPartie = 0;
 				printf("Bye bye!\n");
 			}
+			if(ch){
+				printf("Chouette! On continue!\n");
+			}
 		}while(ch != 0 || ch != 1);
-		printf("Chouette! On continue!\n");
 	}while(!continuerPartie);
 	return 0;
 }
