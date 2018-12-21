@@ -34,7 +34,6 @@ int main(int argc, char const *argv[])
 		else{
 			printf("Oh!\n");
 		}
-		tmp++;
 	}while(rep != nombreMystere);
 
 	printf("Bravo, c'est trouvé! En exactement %d coups\n",tmp);
