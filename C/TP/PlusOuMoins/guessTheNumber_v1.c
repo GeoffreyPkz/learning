@@ -70,10 +70,10 @@ int main(int argc, char const *argv[])
 		//Boucle pour continuer ou non
 		do{
 			scanf("%d", &ch);
-			if(ch != 0 && ch != 1){
+			if((ch != 0) && (ch != 1)){
 				printf("J'ai besoin d'une réponse! Zéro ou Un! Comme ça -> 0 ou 1\n");
 			}
-		}while(ch != 0 || ch != 1);
+		}while((ch != 0) || (ch != 1));
 
 		if(!ch){
 			continuerPartie = 0;
