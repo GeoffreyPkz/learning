@@ -73,15 +73,16 @@ int main(int argc, char const *argv[])
 			if(ch != 0 && ch != 1){
 				printf("J'ai besoin d'une réponse! Zéro ou Un! Comme ça -> 0 ou 1\n");
 			}
-			if(!ch){
-				continuerPartie = 0;
-				printf("Bye bye!\n");
-			}
-			if(ch){
-				continuerPartie = 1;
-				printf("Chouette! On continue!\n");
-			}
 		}while(ch != 0 || ch != 1);
+
+		if(!ch){
+			continuerPartie = 0;
+			printf("Bye bye!\n");
+		}
+		if(ch){
+			continuerPartie = 1;
+			printf("Chouette! On continue!\n");
+		}
 	}while(!continuerPartie);
 	return 0;
 }
