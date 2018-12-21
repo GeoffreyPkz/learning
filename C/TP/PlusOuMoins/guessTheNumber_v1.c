@@ -66,8 +66,8 @@ int main(int argc, char const *argv[])
 
 		continuerPartie = rejouer();
 		printf("vous avez tappé : %d\n",continuerPartie);
+	}while(continuerPartie != 0);
 
-	}while(!continuerPartie);
 	return 0;
 }
 
