@@ -42,7 +42,7 @@ int main(int argc, char *argv[]){
 				afficheTab(tab3,4);
 				printf("On applique la fonction maximumTableau : \n");
 				maximumTableau(tab3,4,20);
-				afficheTab(tab3);
+				afficheTab(tab3,4);
 				break;
 			case 5:
 				printf("\n");
