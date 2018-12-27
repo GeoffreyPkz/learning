@@ -1,9 +1,9 @@
 all: tableaux
 
-hello: tableaux.o main.o
+tableaux: tableaux.o main.o
 	gcc -o tableaux tableaux.o main.o
 
-hello.o: tableaux.c
+tableaux.o: tableaux.c
 	gcc -o hello.o -c tableaux.c -W -Wall -ansi -pedantic
 
 main.o: main.c tableaux.h
