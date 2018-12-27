@@ -1,0 +1,16 @@
+all: tableaux
+
+hello: tableaux.o main.o
+	gcc -o tableaux tableaux.o main.o
+
+hello.o: tableaux.c
+	gcc -o hello.o -c tableaux.c -W -Wall -ansi -pedantic
+
+main.o: main.c tableaux.h
+	gcc -o main.o -c main.c -W -Wall -ansi -pedantic
+
+clean:
+	rm -rf *.o
+
+mrproper: clean
+rm -rf tableaux
