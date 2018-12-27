@@ -61,7 +61,7 @@ void maximumTableau(int tableau[], int tailleTableau, int valeurMax){
 }
 
 void ordonnerTableau(int tableau[], int tailleTableau){
-	int i = 0, j = 0;
+	int i = 0, j = 0, tmp = 0;
 	for(i=0; i<tailleTableau; i++){
    		for(j=i+1; j<tailleTableau; j++) {
       		if(tableau[i]>tableau[j]) {
