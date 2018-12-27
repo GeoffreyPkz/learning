@@ -1,16 +1,25 @@
-all: tableaux
+CC=gcc
+CFLAGS=-W -Wall -ansi -pedantic
+LDFLAGS=
+EXEC=tableaux
+SRC= $(wildcard *.c)
+OBJ= $(SRC:.c=.o)
 
-tableaux: tableaux.o main.o
-	gcc -o tableaux tableaux.o main.o
+all: $(EXEC)
 
-tableaux.o: tableaux.c
-	gcc -o tableaux.o -c tableaux.c -W -Wall -ansi -pedantic
+tableaux: $(OBJ)
+	@$(CC) -o $@ $^ $(LDFLAGS)
 
-main.o: main.c tableaux.h
-	gcc -o main.o -c main.c -W -Wall -ansi -pedantic
+main.o: tableaux.h
+
+%.o: %.c
+	@$(CC) -o $@ -c $< $(CFLAGS)
+
+.PHONY: clean mrproper
 
 clean:
-	rm -rf *.o
+	@rm -rf *.o
 
 mrproper: clean
-	rm -rf tableaux
+	@rm -rf $(EXEC)
+
