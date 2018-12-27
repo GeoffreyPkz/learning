@@ -13,4 +13,4 @@ clean:
 	rm -rf *.o
 
 mrproper: clean
-rm -rf tableaux
+	rm -rf tableaux
