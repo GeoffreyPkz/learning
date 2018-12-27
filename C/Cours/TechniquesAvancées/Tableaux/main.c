@@ -5,6 +5,7 @@
 //déclaration des prototypes des fonctions
 int menu();
 int sommeTableau(int tableau[], int tailleTableau);
+void afficheTab(int *tableau, int tailleTab);
 double moyenneTableau(int tableau[], int tailleTableau);
 void copie(int tableauOriginal[], int tableauCopie[], int tailleTableau);
 void maximumTableau(int tableau[], int tailleTableau, int valeurMax);
@@ -17,6 +18,8 @@ int rep = 1;
 int main(int argc, char *argv[]){
 
 	int tab[4] = {1,2,3,4};
+	int tab2[4] = {0};
+
 	do{
 		switch(menu()){
 			case 1:
@@ -26,7 +29,11 @@ int main(int argc, char *argv[]){
 				printf("La moyenne des valeurs du tableau est : %f\n", moyenneTableau(tab,4));
 				break;
 			case 3:
-				printf("\n");
+				printf("tableau N°1:\n");
+				afficheTab(tab,4);
+				printf("Copie du tableau N°1\n");
+				copie(tab,tab2,4);
+				afficheTab(tab2,4);
 				break;
 			case 4:
 				printf("\n");
@@ -78,4 +85,18 @@ double moyenneTableau(int tableau[], int tailleTableau){
 	moyenne = somme/tailleTableau;
 
 	return moyenne;
+}
+
+void copie(int tableauOriginal[], int tableauCopie[], int tailleTableau){
+	int i = 0;
+	for(i = 0;i<tailleTableau;i++){
+		tableauCopie[i] = tableauOriginal[i];
+	}
+}
+
+void afficheTab(int *tableau, int tailleTab){
+	int i = 0;
+	for (i=0;i<tailleTab;i++){
+		printf("case numéro %d porte la valeur %d \n",i,tableau[i]);
+	}
 }
