@@ -1,5 +1,5 @@
-#ifndef TABLEAUX_H
-#define TABLEAUX_H
+#ifndef H_GL_TABLEAUX
+#define H_GL_TABLEAUX
 
 int menu();
 int sommeTableau(int tableau[], int tailleTableau);
