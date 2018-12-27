@@ -19,6 +19,7 @@ int main(int argc, char *argv[]){
 
 	int tab[4] = {1,2,3,4};
 	int tab2[4] = {0};
+	int tab3[4] = {15,81,22,13};
 
 	do{
 		switch(menu()){
@@ -36,7 +37,12 @@ int main(int argc, char *argv[]){
 				afficheTab(tab2,4);
 				break;
 			case 4:
-				printf("\n");
+				printf("Valeur Max du tableau, la valeur max est 20\n");
+				printf("Le tableau de l'exercice est le suivant \n");
+				afficheTab(tab3,4);
+				printf("On applique la fonction maximumTableau : \n");
+				maximumTableau(tab3,4,20);
+				afficheTab(tab3);
 				break;
 			case 5:
 				printf("\n");
@@ -98,5 +104,14 @@ void afficheTab(int *tableau, int tailleTab){
 	int i = 0;
 	for (i=0;i<tailleTab;i++){
 		printf("case numéro %d porte la valeur %d \n",i,tableau[i]);
+	}
+}
+
+void maximumTableau(int tableau[], int tailleTableau, int valeurMax){
+	int i = 0;
+	for(i=0; i<tailleTableau;i++){
+		if(tableau[i] > valeurMax){
+			tableau[i] = 0;
+		}
 	}
 }
