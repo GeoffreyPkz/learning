@@ -36,7 +36,11 @@ int main(int argc, char *argv[]){
 				afficheTab(tab3,4);
 				break;
 			case 5:
-				printf("\n");
+				printf("Tri du tableau suivant :\n");
+				afficheTab(tab3,4);
+				printf("Après le tri : \n");
+				ordonnerTableau(tab3,4);
+				afficheTab(tab3,4);
 				break;
 			default:
 				printf("Pas de choix?\n");
