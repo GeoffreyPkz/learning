@@ -3,9 +3,6 @@
 #include <math.h>
 #include "tableaux.h"
 
-
-
-//déclaration des variables
 int rep = 1;
 
 

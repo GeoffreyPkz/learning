@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <math.h>
 
+
+
 int menu(){
 	printf("Veuillez choisir l'opération sur le tableau\n");
 	printf("1- Addition des valeurs du tableau\n");

@@ -1,7 +1,6 @@
 #ifndef TABLEAUX_H
 #define TABLEAUX_H
 
-//déclaration des prototypes des fonctions
 int menu();
 int sommeTableau(int tableau[], int tailleTableau);
 void afficheTab(int *tableau, int tailleTab);
